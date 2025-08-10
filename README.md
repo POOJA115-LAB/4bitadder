@@ -6,10 +6,14 @@ Designed a 4-bit adder in Xilinx Vivado using Verilog HDL. Inputs A, B (4-bit) a
 //MAIN CODE
 
 module bit4_adder(
-    input [3:0] a, b,
-    input cin,
-    output [3:0] sum,
-    output cout
+
+input [3:0] a, b,
+
+input cin,
+
+ output [3:0] sum,
+    
+output cout
 );
     assign{cout,sum}=a+b+cin;
 endmodule
