@@ -19,6 +19,8 @@ output cout
 endmodule
 
 
+
+
 //TEST BENCH
 
 module stimulii;
@@ -51,6 +53,9 @@ bit4_adder uut ( .a(a), .b(b), .cin(cin),.sum(sum), .cout(cout));
     end
     
 endmodule
+
+
+
 
 //FULL CUSTOM DESIGN
 
