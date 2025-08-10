@@ -33,7 +33,11 @@ endmodule
 
 //FULL CUSTOM
 1.Basic Unit – Each stage is a 1-bit full adder with inputs A, B, and Cin, and outputs Sum and Cout.
+
+
 2.Cascading – The carry-out (Cout) of each full adder is connected to the carry-in (Cin) of the next stage.
+
+
 3.First Stage – The Cin is set to 0 for the least significant bit (LSB) adder.
 4.Sequential Operation – Addition proceeds from LSB to most significant bit (MSB) through carry propagation.
 5.Final Carry – The carry-out from the MSB adder represents the overall carry of the 4-bit sum.
