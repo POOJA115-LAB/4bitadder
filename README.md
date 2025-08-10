@@ -23,30 +23,31 @@ endmodule
 
 module stimulii;
 
-    reg [3:0] a, b;
+   reg [3:0] a, b;
     
-    reg       cin;
+   reg cin;
     
-    wire [3:0] sum;
+   wire [3:0] sum;
     
-    wire      cout;
+   wire cout;
 
 bit4_adder uut ( .a(a), .b(b), .cin(cin),.sum(sum), .cout(cout));
 
-    initial begin
-        a = 4'b0000; b = 4'b0000; cin = 0;
+   initial begin
+   
+   a = 4'b0000; b = 4'b0000; cin = 0;
+   
+  #10 a = 4'b0011; b = 4'b0101; cin = 0;
+        
+  #10 a = 4'b1111; b = 4'b0001; cin = 0;
+        
+   #10 a = 4'b1010; b = 4'b0000; cin = 1;
        
-        #10 a = 4'b0011; b = 4'b0101; cin = 0;
+   #10 a = 4'b1111; b = 4'b0000; cin = 1;
         
-        #10 a = 4'b1111; b = 4'b0001; cin = 0;
+   #10;
         
-        #10 a = 4'b1010; b = 4'b0000; cin = 1;
-        
-        #10 a = 4'b1111; b = 4'b0000; cin = 1;
-        
-        #10;
-        
-        $stop;
+   $stop;
     end
     
 endmodule
